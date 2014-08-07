@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script src="js/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".div-select").each(function(index) {
+                    
+                    $(".div-select:eq(" + index + ")").click(function(){
+                        var val = $(".div-select:eq(" + index + ")").html();
+                        
+                        $(".div-selected").html(val);
+                    });
+                });
+            });
+        </script>
+        <style>
+            .comment{
+                color:blue;
+            }
+            .div-select{
+                padding: 5px;
+                background-color: aqua;
+                margin: 5px;
+                float:left;
+                cursor: crosshair;
+            }
+        </style>
+    </head>
+    <body>
+        <label class="comment">mas effective pag class ang ginamit na alternative ID</label><br /><br />
+        
+        <div>Select:</div>
+        <div class="div-select">A</div>
+        <div class="div-select">B</div>
+        <div class="div-select">C</div>
+        <div class="div-select">D</div>
+        <div class="div-select">E</div>
+        <div class="div-select">F</div>
+        
+        
+        <div style="clear: both;">
+            Selected:
+            <div class="div-selected" style="font-size: 35px; font-weight: bold;"></div>
+        </div>
+    </body>
+</html>

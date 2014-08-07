@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="js/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#right-click").mousedown(function(e){
+                    if(e.button == 2){
+                        alert("Right Click");
+                        return false;
+                    }
+                    return true;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="right-click" style="background-color: aqua; border:1px solid #000; width:20px; height: 20px;"></div>
+    </body>
+</html>
